@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    dt {
+      font-weight: bold;
+    }
+  </style>
+
+    <script src="./app.js"></script>
+  <body>
+    <form>
+      <fieldset id="showRegister">
+        <legend>Register Product</legend>
+        <dl>
+          <dt>Product Id</dt>
+          <dd><input type="number" min="1" max="10" id="txtId" /></dd>
+          <dt>Product Name</dt>
+          <dd><input type="text" id="txtName" placeholder="Nhập tên..." /></dd>
+          <dt>Product price</dt>
+          <dd><input type="range" min="59" max="500" id="txtPrice" /></dd>
+          <dt>Product DayOf</dt>
+          <dd><input type="date" id="txtMfd" /></dd>
+          <dt>Is in stock</dt>
+          <dd>
+            <input type="radio" name="stock" value="Còn hàng" id="optYes" />
+            Yes
+            <input type="radio" name="stock" value="hết hàng" id="optNo" />
+            No
+          </dd>
+          <dt>Shipped to</dt>
+          <dd>
+            <select id="City">
+              <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+              <option value="Bình Thuận">Bình Thuận</option>
+            </select>
+          </dd>
+        </dl>
+        <br />
+        <input type="button" value="Register" onclick="createRegister()" />
+      </fieldset>
+      <br />
+      <fieldset id="showDetails">
+        <legend>Product Details</legend>
+        <table width="400" border="1">
+          <tr>
+            <td>Product Id</td>
+            <td id="lblId"></td>
+          </tr>
+          <tr>
+            <td>Product Name</td>
+            <td id="lblName"></td>
+          </tr>
+          <tr>
+            <td>Product Price</td>
+            <td id="lblPrice"></td>
+          </tr>
+
+          <tr>
+            <td>Manu Day Of</td>
+            <td id="lblDay"></td>
+          </tr>
+          <tr>
+            <td>Is in stock</td>
+            <td id="lblStock"></td>
+          </tr>
+
+          <tr>
+            <td>Shipped to</td>
+            <td id="lblShipped"></td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>

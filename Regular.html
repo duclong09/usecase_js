@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function regular() {
+      var product = {
+        id: 1,
+        name: "long",
+        price: 10000,
+        isStock: false,
+        quantity: 3,
+        shippto: ["Hcm", "Binh Thuan"],
+        Total: function () {
+          return product.quantity * product.price;
+        },
+      };
+
+      if (product.isStock == true) {
+        stock = "succesfully";
+      } else {
+        stock = "Define successfully";
+      }
+      document.write(
+        "Id: " +
+          product.id +
+          "<br>" +
+          "Name= " +
+          product.name +
+          "<br>" +
+          "Price: " +
+          product.price +
+          "<br>" +
+          "Is in stock: " +
+          stock +
+          "<br>" +
+          "shippto: " +
+          product.shippto[1] +
+          "<br>" +
+          "Total: " +
+          product.Total()
+      );
+    }
+    regular();
+  </script>
+</html>

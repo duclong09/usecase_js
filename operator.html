@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table width="600" border="2" cellspacing="5" align="center">
+            <tr>
+                <td>
+                    <input type="button" value="previous" onclick="previousClick()">
+                </td>
+
+                <td>
+                    <img src="nation.jpg" width="600" height="300" id="pic">
+                </td>
+
+                <td>
+                    <input type="button" value="next" onclick="nextClick()">
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+
+
+
+    
+</body>
+
+<script>
+    var product =["bien.jpg", "nation.jpg", "duclong.jpg"];
+    var count = 0;
+
+    function previousClick(){
+        var pic = document.getElementById("pic");
+        count--;
+        pic.src=product[count];
+    }
+    function nextClick(){
+        var pic=document.getElementById("pic");
+        count++;
+        pic.src=product[count];
+    }
+</script>
+</html>

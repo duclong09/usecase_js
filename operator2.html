@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>Select Courses</legend>
+        <ul>
+          <li><input type="checkbox" id="optH&M" value="h&m" /> H&M</li>
+          <li><input type="checkbox" id="optGucci" value="gucci" /> GUCCI</li>
+          <li><input type="checkbox" id="optDior" value="dior" /> DIOR</li>
+        </ul>
+        <br />
+        <input type="button" value="submit" onclick="submitClick()" />
+      </fieldset>
+      <br />
+      <div align="center" id="msg"></div>
+    </div>
+  </body>
+
+  <script>
+    function submitClick() {
+      var hvm = document.getElementById("optH&M");
+      var gucci = document.getElementById("optGucci");
+      var dior = document.getElementById("optDior");
+      var msg = document.getElementById("msg");
+
+      var course = "";
+
+      if (hvm.checked) {
+        course += hvm.value + "<br>";
+      }
+      if (gucci.checked) {
+        course += gucci.value + "<br>";
+      }
+      if (dior.checked) {
+        course += dior.value + "<br>";
+      }
+      msg.innerHTML = "selected course" + "<br>" + course;
+    }
+  </script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <table
+        width="500"
+        border="2"
+        cellspacing="4"
+        cellpadding="4"
+        align="center"
+      >
+        <tr>
+          <td>
+            <img src="" id="picture" width="200" height="200" />
+          </td>
+        </tr>
+        <tr>
+          <td>productId</td>
+          <td id="prodId"></td>
+        </tr>
+        <tr>
+          <td>productName</td>
+          <td id="prodName"></td>
+        </tr>
+        <tr>
+          <td>productPrice</td>
+          <td id="prodPrice"></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="range"
+              id="txtranger"
+              min="0"
+              max="3"
+              value="0"
+              onchange="showProduct()"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script>
+    function showProduct() {
+      var products = [
+        { id: 1, name: "Long", price: 400, photo: "./images/bien.jpg" },
+        { id: 2, name: "Nhi", price: 500, photo: "./images/nation.jpg" },
+        { id: 3, name: "Linh", price: 600, photo: "./images/bien.jpg" },
+      ];
+      var pic = document.getElementById("picture");
+      var txtRanger = document.getElementById("txtranger");
+      var productId = document.getElementById("prodId");
+      var productName = document.getElementById("prodName");
+      var productPrice = document.getElementById("prodPrice");
+
+      pic.src = products[txtRanger.value].photo;
+      prodId.innerHTML = products[txtRanger.value].id;
+      prodName.innerHTML = products[txtRanger.value].name;
+      productPrice.innerHTML = products[txtRanger.value].price;
+    }
+  </script>
+</html>

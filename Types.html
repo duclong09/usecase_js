@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table width="500" border="2" cellspacing="5" cellpadding="5" align="center">
+            <tr>
+                <td align="center" id="productName"></td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="pic" src="./images/bien.jpg" width="500" height="300">
+                </td>
+            </tr>
+              <tr>
+                <td>
+                  <input type="range" id="txtRanger" value="0" min="0" max="4" onchange="showProduct()">
+               
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    //kieu nguyen thuy trong js
+
+    // function duclong(){
+    //     var product = [1, "Moblie", 200, true];
+    //     document.write("id: " + product[0] + "<br>" + "Name: " + product[1]+ "<br>" + "price: " + product[2] + "<br>" + "in stock: " + product[3]);
+    // }
+
+    // duclong();
+
+
+
+    function showProduct(){
+        var productNames = ["duclong", "yennhi", "nike", "Mlb", "gucci"];
+
+       var productImages = ["duclong.img", "nation.jpg", "nike.img", "mlb.img", "gucci.img"];
+
+       var productName = document.getElementById("productName");
+       var imges = document.getElementById("pic");
+       var ranger = document.getElementById("txtRanger");
+
+       productName.innerHTML = productNames[txtRanger.value];
+       imges.src = productImages[txtRanger.value];
+
+
+    }
+
+    
+</script>
+</html>
