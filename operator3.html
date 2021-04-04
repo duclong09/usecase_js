@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Login</legend>
+            <div>
+                <dt>Username</dt>
+                <dd>
+                    <input type="text" id="txtName">
+                </dd>
+                <dt>Password</dt>
+                <dd>
+                    <input type="password" id="txtPass">
+                </dd>
+                <br>
+                <button type="button" value="login" onclick="login();">Submit</button>
+            </div>
+        </fieldset>
+        <div align="center">
+            <h2 id="txtMsg"></h2>
+        </div>
+    </div>
+</body>
+<script>
+    function login(){
+        var user = document.getElementById("txtName").value;
+        var pass = document.getElementById("txtPass").value;
+
+        var msg = document.getElementById("txtMsg");
+
+        var userDetail =  {userName:"duclong", passWord:"123123"};
+        (user == userDetail.userName && pass == userDetail.passWord)?
+            document.write("loggin cuccess"): msg.innerHTML="tai khoan/mk sai";
+    }
+</script>
+</html>

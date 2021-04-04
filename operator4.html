@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="container">
+
+        </div>
+        <br>
+        <input type="button" value="create image" onclick="create();">
+    </div>
+</body>
+<script>
+    function create(){
+        var container = document.getElementById("container");
+        var pic = new Image();
+        pic.src = "nation.jpg";
+        pic.width = "200";
+        pic.height = "200";
+        pic.border = "2";
+        container.appendChild(pic);
+    }
+</script>
+</html>
