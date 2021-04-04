@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>Install game</legend>
+        <dl>
+          <dt>Select available hard disk space</dt>
+          <dd>
+            <select id="listHdd" onchange="selecDisk();">
+              <option value="2">2GB</option>
+              <option value="5">5GB</option>
+              <option value="10">10GB</option>
+            </select>
+          </dd>
+          <dt>Select availble ram</dt>
+          <dd>
+            <input
+              type="number"
+              min="1"
+              max="8"
+              value="1"
+              id="txtRam"
+              disabled
+              onchange="selectRam();"
+            />
+          </dd>
+          <dt>Is Graphic card Availble</dt>
+          <dd>
+            <select id="lstGraphic" disabled onchange="selectGraphic();">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </dd>
+          <br />
+          <input
+            type="button"
+            id="btnInstall"
+            value="install"
+            disabled
+            onclick="install();"
+          />
+        </dl>
+      </fieldset>
+    </div>
+  </body>
+
+  <script src="./contralflow.js"></script>
+</html>
