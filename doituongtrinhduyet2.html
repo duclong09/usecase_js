@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    dt {
+      background-color: aqua;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+  <body>
+    <div>
+      <div align="center">
+        <input
+          type="button"
+          value="Get client location details"
+          onclick="GetDetails();"
+        />
+        <input type="button" value="Refresh" onclick="location.reload();" />
+      </div>
+      <div id="details" style="display: none">
+        <dl>
+          <dt>Server name/ip address</dt>
+          <dd id="host"></dd>
+          <dt>protocol</dt>
+          <dd id="protocol"></dd>
+          <dt>URL</dt>
+          <dd id="url"></dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function GetDetails() {
+      document.getElementById("details").style.display = "block";
+      document.getElementById("host").innerHTML = location.host;
+      var msg = " ";
+      switch (location.protocol) {
+        case "http:":
+          msg = "page accessed from server and sucured";
+          break;
+        case "file:":
+          msg = "page is not access from server";
+          break;
+      }
+      document.getElementById("protocol").innerHTML =
+        location.protocol + "br" + msg;
+      document.getElementById("url").innerHTML = location.href;
+    }
+  </script>
+</html>
