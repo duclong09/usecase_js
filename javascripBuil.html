@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align ="center" id="msg">1231231</div>
+    <br>
+    <div align="center">
+        <input type="button" value="Refresh" onclick="ranDom();">
+    </div>
+</body>
+
+<script>
+    function ranDom(){
+        var a = Math.random() * 10;
+         var b = Math.random() * 10;
+          var c = Math.random() * 10;
+           var d = Math.random() * 10;
+            var e = Math.random() * 10;
+        document.getElementById("msg").innerHTML =
+        Math.round(a) + " " + Math.round(b) + " " + Math.round(c) + " " + Math.round(d) + " " + Math.round(e);
+    }
+    ranDom();
+</script>
+</html>
