@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div align="center">
+      <input type="button" name="" value="Get browser details" onclick="getDetail()" />
+    </div>
+    <br />
+    <div>
+      <dl>
+        <dt>Browser family</dt>
+        <dd id="family"></dd>
+        <dt>Browser languager</dt>
+        <dd id="language"></dd>
+        <dt>cookie enabled</dt>
+        <dd id="cookie"></dd>
+        <dt>supported on</dt>
+        <dd id="agent"></dd>
+        <dt>plugin supports</dt>
+        <dd id="plug"></dd>
+        <dt>can user view pdf document?</dt>
+        <dd id="msg"></dd>
+      </dl>
+    </div>
+  </body>
+
+  <script>
+    function getDetail() {
+      document.getElementById("family").innerHTML = navigator.appName;
+      document.getElementById("language").innerHTML = navigator.language;
+      document.getElementById("cookie").innerHTML = navigator.cookieEnabled;
+      document.getElementById("agent").innerHTML = navigator.userAgent;
+
+      for (var i = 0; i < navigator.plugins.length; i++) {
+        document.getElementById("plug").innerHTML +=
+          navigator.plugins[i].name + "<br>";
+      }
+      var msg = document.getElementById("msg");
+      if (navigator.plugins["chrome pdf viewer" == undefined]) {
+        msg.innerHTML = "No";
+      } else {
+        msg.innerHTML = "Yes";
+      }
+    }
+  </script>
+</html>
